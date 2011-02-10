@@ -12,7 +12,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "binder-rotator"
+  gem.name = "banner-rotator"
   gem.homepage = "git@github.com:AlexisMasters/banner-rotator.git"
   gem.license = "MIT"
   gem.summary = %Q{TODO: one-line summary of your gem}
@@ -47,7 +47,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "binder-rotator #{version}"
+  rdoc.title = "banner-rotator #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
