@@ -14,14 +14,14 @@ Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "banner-rotator"
   gem.homepage = "git@github.com:AlexisMasters/banner-rotator.git"
-  gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.license = "MIT for the gem; restricted license for the jQuery code"
+  gem.summary = %Q{refinerycms banner rotator capability using jQuery plugin}
+  gem.description = %Q{provides banner rotator using refinerycms-page-images gallery}
   gem.email = "dsaronin@gmail.com"
-  gem.authors = ["Daudi Amani"]
+  gem.authors = ["David Anderson"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
   # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  #  gem.add_runtime_dependency 'jabber4r', '> 0.1'
+    gem.add_dependency 'refinerycms-page-images', '~> 1.0.3'
   #  gem.add_development_dependency 'rspec', '> 1.2.3'
 end
 Jeweler::RubygemsDotOrgTasks.new
