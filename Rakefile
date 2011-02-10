@@ -13,7 +13,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "banner-rotator"
-  gem.homepage = "git@github.com:AlexisMasters/banner-rotator.git"
+  gem.homepage = "git://github.com/AlexisMasters/banner-rotator.git"
   gem.license = "MIT for the gem; restricted license for the jQuery code"
   gem.summary = %Q{refinerycms banner rotator capability using jQuery plugin}
   gem.description = %Q{provides banner rotator using refinerycms-page-images gallery}
