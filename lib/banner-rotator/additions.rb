@@ -9,9 +9,9 @@ module ApplicationHelper
 # however, if 'banner global' exists, it is to be used for all pages
 # ---------------------------------------------------------------------------  
   def get_banner_gallery( page )
-    return []
+    return [] unless @page.present? && (banner_page = @page.parts.detect{|p| p.title =~ /^banner/i})
+    return banner_page.images
   end
-
 
 
 end # module ApplicationHelper
