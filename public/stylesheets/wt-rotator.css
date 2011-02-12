@@ -28,7 +28,7 @@ z-index:0;
 border:0;
 }
 .wt-rotator .preloader{
-background:#000 url(assets/loader.gif) no-repeat center;
+background:#000 url(../images/assets/loader.gif) no-repeat center;
 float:left;
 width:34px;
 height:34px;
@@ -138,16 +138,16 @@ color:#FFF;
 background-color:#000;
 }
 .wt-rotator .play-btn{
-background:#000 url(assets/play.png) no-repeat center;
+background:#000 url(../images/assets/play.png) no-repeat center;
 }
 .wt-rotator .pause{
-background:#000 url(assets/pause.png) no-repeat center;
+background:#000 url(../images/assets/pause.png) no-repeat center;
 }
 .wt-rotator .prev-btn{
-background:#000 url(assets/prev.png) no-repeat center;
+background:#000 url(../images/assets/prev.png) no-repeat center;
 }
 .wt-rotator .next-btn{
-background:#000 url(assets/next.png) no-repeat center;
+background:#000 url(../images/assets/next.png) no-repeat center;
 }
 .wt-rotator .button-over{
 background-color:#CCC;
@@ -162,7 +162,7 @@ display:none;
 #rotator-tooltip.txt-up{
 margin-left:-10px;
 margin-bottom:5px;
-background:url(assets/tail.png) no-repeat;
+background:url(../images/assets/tail.png) no-repeat;
 background-position:10px bottom;
 background-position-x:10px;
 background-position-y:bottom;
@@ -170,7 +170,7 @@ background-position-y:bottom;
 #rotator-tooltip.txt-down{
 margin-left:-10px;
 margin-top:24px;
-background:url(assets/rev_tail.png) no-repeat;
+background:url(../images/assets/rev_tail.png) no-repeat;
 background-position:10px top;
 background-position-x:10px;
 background-position-y:top;
@@ -178,12 +178,12 @@ background-position-y:top;
 #rotator-tooltip.img-up{
 margin-left:5px;
 margin-bottom:5px;
-background:url(assets/tail.png) center bottom no-repeat;
+background:url(../images/assets/tail.png) center bottom no-repeat;
 }
 #rotator-tooltip.img-down{
 margin-left:5px;
 margin-top:24px;
-background:url(assets/rev_tail.png) center top no-repeat;
+background:url(../images/assets/rev_tail.png) center top no-repeat;
 }
 #rotator-tooltip .tt-txt{
 font-family:Arial,Helvetica,sans-serif;
