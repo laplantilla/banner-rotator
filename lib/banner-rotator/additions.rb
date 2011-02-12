@@ -9,8 +9,8 @@ module ApplicationHelper
 # if no banner sub-page exists and if 'banner global' exists, it is to be used for all pages
 # ---------------------------------------------------------------------------  
   def get_banner_gallery( page )
-    return [] unless @page.present? 
-    return [] unless (banner_page = @page.children.detect{|p| p.title =~ /^banner/i}) ||
+    return [] unless page && page.present? 
+    return [] unless (banner_page = page.children.detect{|p| p.title =~ /^banner/i}) ||
                      (banner_page = Page.first( :conditions => "title ILIKE '%banner global%'" ) )
     return banner_page.images
   end
