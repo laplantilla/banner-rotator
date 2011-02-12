@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{banner-rotator}
-  s.version = "0.1.4"
+  s.version = "0.1.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Anderson"]
@@ -40,8 +40,6 @@ Gem::Specification.new do |s|
     "public/images/assets/prev.png",
     "public/images/assets/rev_tail.png",
     "public/images/assets/tail.png",
-    "public/javascripts/jquery-1.4.2.min.js",
-    "public/javascripts/jquery.wt-rotator.js",
     "public/javascripts/jquery.wt-rotator.min.js",
     "public/stylesheets/wt-rotator.css",
     "test.rb",
