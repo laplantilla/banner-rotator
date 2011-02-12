@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{banner-rotator}
-  s.version = "0.1.0"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Anderson"]
-  s.date = %q{2011-02-10}
+  s.date = %q{2011-02-11}
   s.description = %q{provides banner rotator using refinerycms-page-images gallery}
   s.email = %q{dsaronin@gmail.com}
   s.extra_rdoc_files = [
@@ -25,9 +25,10 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "app/helpers/banner_rotator_helper.rb",
+    "banner-rotator.gemspec",
     "doc/help.html",
     "lib/banner-rotator.rb",
+    "lib/banner-rotator/additions.rb",
     "public/images/assets/black/next.png",
     "public/images/assets/black/pause.png",
     "public/images/assets/black/play.png",
@@ -43,6 +44,7 @@ Gem::Specification.new do |s|
     "public/javascripts/jquery.wt-rotator.js",
     "public/javascripts/jquery.wt-rotator.min.js",
     "public/stylesheets/wt-rotator.css",
+    "test.rb",
     "test/helper.rb",
     "test/test_banner-rotator.rb"
   ]
