@@ -2,13 +2,12 @@
 module ApplicationHelper
   
 unless const_defined?('SQL_LIKE__')
-  SQL_LIKE__ = "ILIKE"
-#  case ActiveRecord::Base.configurations[::Rails.env.to_s]['adapter']
-#    when 'postgresql'  then
-#      SQL_LIKE__ = "ILIKE"
-#  else
-#      SQL_LIKE__ = "LIKE"
-#  end  # case
+  case ActiveRecord::Base.configurations[::Rails.env.to_s]['adapter']
+    when 'postgresql'  then
+      SQL_LIKE__ = "ILIKE"
+  else
+      SQL_LIKE__ = "LIKE"
+  end  # case
 
 end
   
