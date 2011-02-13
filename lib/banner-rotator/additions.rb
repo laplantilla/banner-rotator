@@ -1,12 +1,12 @@
 
 module ApplicationHelper
   
-unless const_defined?('__SQL_LIKE')
+unless const_defined?('SQL_LIKE__')
   case ActiveRecord::Base.configurations[RAILS_ENV]['adapter']
     when 'postgresql'  then
-      __SQL_LIKE = "ILIKE"
+      SQL_LIKE__ = "ILIKE"
   else
-      __SQL_LIKE = "LIKE"
+      SQL_LIKE__ = "LIKE"
   end  # case
 
 end
@@ -21,7 +21,7 @@ end
   def get_banner_gallery( page )
     return [] unless page && page.present? 
     return [] unless (banner_page = page.children.detect{|p| p.title =~ /^banner/i}) ||
-                     (banner_page = Page.first( :conditions => "title ${__SQL_LIKE} '%banner global%'" ) )
+                     (banner_page = Page.first( :conditions => "title ${SQL_LIKE__} '%banner global%'" ) )
     return banner_page.images
   end
 
