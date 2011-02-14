@@ -2,6 +2,19 @@
 module ApplicationHelper
   
 # ---------------------------------------------------------------------------  
+# ilike -- returns the SQL verb for a case insensitive comparison
+# since this differs by DB adapter, this is required
+# ---------------------------------------------------------------------------  
+  def ilike()
+    case ActiveRecord::Base.configurations[ Rails.env.to_s ]['adapter']
+      when 'postgresql'  then 'ILIKE'
+    else
+      'LIKE'
+    end # case
+  end
+
+
+# ---------------------------------------------------------------------------  
 # get_banner_gallery -- returns list of page_images for the banner for a page
 # args:
 #   page -- Page obj for page we're on
@@ -11,7 +24,7 @@ module ApplicationHelper
   def get_banner_gallery( page )
     return [] unless page && page.present? 
     return [] unless (banner_page = page.children.detect{|p| p.title =~ /^banner/i}) ||
-                     (banner_page = Page.first( :conditions => "title LIKE '%banner global%'" ) )
+                     (banner_page = Page.first( :conditions => "title #{ ilike() } '%banner global%'" ) )
     return banner_page.images
   end
 
