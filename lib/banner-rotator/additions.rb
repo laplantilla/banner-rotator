@@ -24,7 +24,11 @@ module ApplicationHelper
   def get_banner_gallery( page )
     return [] unless page && page.present? 
     return [] unless (banner_page = page.children.detect{|p| p.title =~ /^banner/i}) ||
-                     (banner_page = ::Page::Translation.first( :conditions => "title #{ ilike() } '%banner global%'" ).page )
+      (
+      (pgtrans_global = ::Page::Translation.first( :conditions => "title #{ ilike() } '%banner global%'" )) && 
+      (banner_page = pgtrans_global.page )
+      )
+                     
     return banner_page.images
   end
 
