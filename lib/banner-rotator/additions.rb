@@ -23,10 +23,8 @@ module ApplicationHelper
 # ---------------------------------------------------------------------------  
   def get_banner_gallery( page )
     return [] unless page && page.present? 
-    return [] unless (banner_page = page.children.detect{|p| p.title =~ /^banner/i})
-# TODO: correct this for refinerycms 1.0.3 using page_translations
-    # ||
-    #                 (banner_page = Page.first( :conditions => "title #{ ilike() } '%banner global%'" ) )
+    return [] unless (banner_page = page.children.detect{|p| p.title =~ /^banner/i}) ||
+                     (banner_page = ::Page::Translation.first( :conditions => "title #{ ilike() } '%banner global%'" ) )
     return banner_page.images
   end
 
